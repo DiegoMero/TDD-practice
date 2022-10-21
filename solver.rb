@@ -1,11 +1,15 @@
 class Solver
-   def factorial(integer)
-    if integer == 0
-      result = 1
-    elsif integer < 0
-      result = 'Not a valid number'
+  def factorial(integer)
+    if integer.zero?
+      1
+    elsif integer.negative?
+      'Not a valid number'
     else
-      result = (1..integer).inject(:*)
+      (1..integer).inject(:*)
     end
+  end
+
+  def reverse(string)
+    string.reverse
   end
 end
