@@ -19,13 +19,21 @@ describe Solver do
       factorial = solver.factorial(-7)
       expect(factorial).to eq 'Not a valid number'
     end
+  end
+end
 
+describe Solver do
+  context 'When testing the solver class' do
     it 'should return the reverse string when calling the reverse method' do
       solver = Solver.new
       reverse = solver.reverse('Hello')
       expect(reverse).to eq 'olleH'
     end
+  end
+end
 
+describe Solver do
+  context 'When testing the solver class' do
     it 'should return fizz if the string is divisible by 3' do
       solver = Solver.new
       fizz = solver.fizzbuzz(9)

@@ -12,4 +12,16 @@ class Solver
   def reverse(string)
     string.reverse
   end
+
+  def fizzbuzz(integer)
+    if (integer % 3).zero? && (integer % 5).zero?
+      'fizzbuzz'
+    elsif (integer % 3).zero?
+      'fizz'
+    elsif (integer % 5).zero?
+      'buzz'
+    else
+      integer.to_s
+    end
+  end
 end
