@@ -25,5 +25,29 @@ describe Solver do
       reverse = solver.reverse('Hello')
       expect(reverse).to eq 'olleH'
     end
+
+    it 'should return fizz if the string is divisible by 3' do
+      solver = Solver.new
+      fizz = solver.fizzbuzz(9)
+      expect(fizz).to eq 'fizz'
+    end
+
+    it 'should return buzz if the string is divisible by 5' do
+      solver = Solver.new
+      buzz = solver.fizzbuzz(10)
+      expect(buzz).to eq 'buzz'
+    end
+
+    it 'should return fizzbuzz if the string is divisible by 3 & 5' do
+      solver = Solver.new
+      fizzbuzz = solver.fizzbuzz(15)
+      expect(fizzbuzz).to eq 'fizzbuzz'
+    end
+
+    it 'should return integer if the string is not devided by 3 & 5' do
+      solver = Solver.new
+      string = solver.fizzbuzz(7)
+      expect(string).to eq '7'
+    end
   end
 end
