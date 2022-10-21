@@ -19,5 +19,11 @@ describe Solver do
       factorial = solver.factorial(-7)
       expect(factorial).to eq 'Not a valid number'
     end
+
+    it 'should return the reverse string when calling the reverse method' do
+      solver = Solver.new
+      reverse = solver.reverse('Hello')
+      expect(reverse).to eq 'olleH'
+    end
   end
 end
